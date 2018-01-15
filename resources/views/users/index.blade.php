@@ -1,11 +1,10 @@
 @extends('users.layout.layout')
 
 @section('content')
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
     <div class="row">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-5 pushContainer">
+        <div class="col-sm-1 col-md-1"></div>
+        <div class="col-sm-6 col-md-6 col-lg-5 pushContainer">
             <div class="pushBlock">
                 <div class="push">
                     <h2 class="pushCount">Click me</h2>
@@ -21,30 +20,7 @@
         </div>
 
         <div class="col-xs-12 col-sm-offset-1 col-sm-4">
-            @if (!Auth::check())
-                <a href="{{ url('/facebook') }}" class="btn btn-primary btn-block facebookButton">
-                    <i class="icon-facebook"></i>    Login with Facebook
-                </a><br>
-            @else
-                <div class="panel panel-default">
-                    <div class="panel-heading c-list">
-                        <span class="title">{{ Auth::user()->name }}</span>
-                    </div>
-                    <ul class="list-group" id="contact-list">
-                        <li class="list-group-item">
-                            <div class="col-xs-12 col-sm-3">
-                                <img src="{{ Auth::user()->fb_image }}" alt="{{ Auth::user()->name }}" class="img-responsive img-circle" />
-                            </div>
-                            <div class="col-xs-12 col-sm-9">
-                                <span class="name">{{ Auth::user()->name }}</span><br>
-                                <span class="name">{{ Auth::user()->email }}</span><br>
-                                <div class="myBest">Your Record <span>{{ $score }}</span></div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                    </ul>
-                </div>
-            @endif
+
             <div class="panel panel-default">
                 <div class="panel-heading c-list">
                     <span class="title">Leaders</span>
@@ -57,8 +33,8 @@
                                     <img src="{{ $leader->user->fb_image }}" alt="{{ $leader->user->name }}" class="img-responsive img-circle" />
                                 </div>
                                 <div class="col-xs-12 col-sm-9">
-                                    <span class="name">{{ $leader->user->name }}</span>
-                                    <span class="name">{{ @$leader->user->email }}</span>
+                                    <span class="name" style="display: block; padding: 0px;">{{ $leader->user->name }}</span>
+                                    <span class="name" style="width:100%;">{{ @$leader->user->email }}</span>
                                     <div>Record <span>{{ $leader->score }}</span></div>
                                 </div>
                                 <div class="clearfix"></div>

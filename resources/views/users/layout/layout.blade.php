@@ -13,17 +13,13 @@
     <title>Push Here</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-9591054949065064",
-            enable_page_level_ads: true
-        });
-    </script>
 </head>
 <body>
     <div class="container">
+        @include('users.layout.header')
         @yield('content')
     </div>
     <script>
@@ -33,6 +29,6 @@
             }
         });
     </script>
-    <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58d664ca8ecc2ba6"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58d664ca8ecc2ba6"></script>
 </body>
 </html>

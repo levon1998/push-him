@@ -30,7 +30,7 @@ h2{
     height: 350px;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 50%;
+    margin-top: 30%;
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
@@ -81,16 +81,71 @@ h2{
     border-top-right-radius: 5px;
 }
 @media only screen and (max-width: 500px) {
+    
     .push{
-        height: 225px;
+        height: 200px;
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 50%;
     }
-    h2{
-        font-size: 30px;
+    .name{
+        font-size: 14px;
     }
-    .time{
-        font-size: 20px;
+}
+@media only screen and (max-width: 1000px) and (min-width: 770px) {
+
+    .push{
+        height: 340px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 30%;
     }
-    .resault{
-        font-size: 20px;
+    .name{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 770px) and (min-width: 740px) {
+    .push{
+        height: 340px;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 20%;
+    }
+    .name{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 740px) and (min-width: 700px) {
+    .push{
+        height: 340px;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 20%;
+    }
+    .name{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 700px) and (min-width: 625px) {
+    .push{
+        height: 300px;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 20%;
+    }
+    .name{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 625px) and (min-width: 530px) {
+    .push{
+        height: 250px;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 20%;
+    }
+    .name{
+        font-size: 10px;
     }
 }
