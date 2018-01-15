@@ -16,26 +16,20 @@
                     </a>
                 </li>
             </ul>
-            <br>
         @else
-            <div class="panel panel-default">
-                <div class="panel-heading c-list">
-                    <span class="title">{{ Auth::user()->name }}</span>
-                </div>
-                <ul class="list-group" id="contact-list">
-                    <li class="list-group-item">
-                        <div class="col-xs-12 col-sm-3">
-                            <img src="{{ Auth::user()->fb_image }}" alt="{{ Auth::user()->name }}" class="img-responsive img-circle" />
-                        </div>
-                        <div class="col-xs-12 col-sm-9">
-                            <span class="name">{{ Auth::user()->name }}</span><br>
-                            <span class="name">{{ Auth::user()->email }}</span><br>
-                            <div class="myBest">Your Record <span>{{ $score }}</span></div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                </ul>
-            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div class="col-xs-12 col-sm-3">
+                        <img src="{{ Auth::user()->fb_image }}" alt="{{ Auth::user()->name }}" class="img-responsive img-circle" />
+                    </div>
+                    <div class="col-xs-12 col-sm-9">
+                        <span class="name">{{ Auth::user()->name }}</span><br>
+                        <span class="name">{{ Auth::user()->email }}</span><br>
+                        <div class="myBest">Your Record <span>{{ $score }}</span></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            </ul>
         @endif
     </div>
 </nav>
